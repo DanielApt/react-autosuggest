@@ -7,8 +7,8 @@ You could store the input element like this:
 
 ```js
 function storeInputReference(autosuggest) {
-  if (autosuggest !== null) {
-    this.input = autosuggest.input;
+  if (autosuggest !== null || autosuggest.current !== null) {
+    this.input = autosuggest.current.input;
   }
 }
 
